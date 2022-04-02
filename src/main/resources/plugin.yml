@@ -1,0 +1,19 @@
+main: "fr.noobtopia.plugin.NoobPlugin"
+version: "1.0"
+name: "NoobTopia"
+author: "DracoLeNoob"
+api-version: "1.18"
+commands:
+  home:
+    description: "Utilise à un home."
+  sethome:
+    description: "Place un home."
+  delhome:
+    description: "Supprime un home."
+  homes:
+    description: "Affiche tous les homes."
+
+  balance:
+    description: "Affiche votre argent."
+  pay:
+    description: "Paye un autre joueur."
