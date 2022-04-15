@@ -11,11 +11,13 @@ public class Folders {
     public static final File homes = new File(noobtopia, "homes/");
     public static final File economy = new File(noobtopia, "economy/");
     public static final File login = new File(noobtopia, "login/");
+    public static final File skills = new File(noobtopia, "skills/");
 
     public static void create(){
         if(!noobtopia.exists()) noobtopia.mkdir();
         if(!homes.exists()) homes.mkdir();
         if(!economy.exists()) economy.mkdir();
         if(!login.exists()) login.mkdir();
+        if(!skills.exists()) skills.mkdir();
     }
 }

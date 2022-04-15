@@ -21,7 +21,7 @@ public class CommandHome implements CommandExecutor {
                         player.teleport(home.getLocation());
                         player.sendMessage(Messages.get("home.use"));
                     }else{
-                        player.sendMessage(Messages.get("home.use.missing"));
+                        player.sendMessage(Messages.get("home.missing"));
                     }
                 }else{
                     player.sendMessage(Messages.get("home.missing"));

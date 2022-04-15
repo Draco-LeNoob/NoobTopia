@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="NoobPlugin.jar">
-    <output-path>$USER_HOME$/OneDrive/Bureau/NoobTopia/plugins</output-path>
+    <output-path>$USER_HOME$/OneDrive/Bureau</output-path>
     <root id="archive" name="NoobPlugin.jar">
       <element id="module-output" name="NoobPlugin" />
     </root>
