@@ -28,17 +28,16 @@ public class CustomEntity {
 
         if(this.level == 0) entity.remove();
 
-        if(boss){
-            entity.setInvulnerable(true);
-            entity.getWorld().strikeLightning(entity.getLocation());
-            entity.setInvulnerable(false);
+        if(boss) {
+            entity.getWorld().strikeLightningEffect(entity.getLocation());
 
             Bukkit.broadcastMessage(Messages.get("boss.spawn")
-                    .replace("<<type>>", entity.getType().toString())
-                    .replace("<<level>>", "" + this.level)
-                    .replace("<<world>>", entity.getWorld().getEnvironment().name())
+                    .replace("<<type>>", "§4" + entity.getType())
+                    .replace("<<level>>", "§e" + this.level)
+                    .replace("<<world>>", "§6" + entity.getWorld().getEnvironment().name())
                     .replace("<<location>>",
-                            (int) entity.getLocation().getX() + " " +
+                            "§2" +
+                                    (int) entity.getLocation().getX() + " " +
                                     (int) entity.getLocation().getY() + " " +
                                     (int) entity.getLocation().getZ()
                     )

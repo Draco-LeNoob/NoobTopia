@@ -2,7 +2,7 @@ package fr.noobtopia.plugin.initer;
 
 import fr.noobtopia.plugin.NoobPlugin;
 import fr.noobtopia.plugin.commands.CommandSpawn;
-import fr.noobtopia.plugin.enchantment.commands.CommandGiveExplosive;
+import fr.noobtopia.plugin.enchantment.enchantments.explosive.commands.CommandGiveExplosive;
 import fr.noobtopia.plugin.home.command.CommandDelHome;
 import fr.noobtopia.plugin.home.command.CommandHome;
 import fr.noobtopia.plugin.home.command.CommandHomes;

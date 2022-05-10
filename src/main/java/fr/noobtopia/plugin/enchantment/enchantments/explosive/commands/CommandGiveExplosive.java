@@ -1,6 +1,6 @@
-package fr.noobtopia.plugin.enchantment.commands;
+package fr.noobtopia.plugin.enchantment.enchantments.explosive.commands;
 
-import fr.noobtopia.plugin.enchantment.enchantments.EnchantmentExplosiveBow;
+import fr.noobtopia.plugin.enchantment.enchantments.explosive.EnchantmentExplosiveBow;
 import fr.noobtopia.plugin.utils.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

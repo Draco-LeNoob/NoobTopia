@@ -1,4 +1,4 @@
-package fr.noobtopia.plugin.enchantment.enchantments;
+package fr.noobtopia.plugin.enchantment.enchantments.explosive;
 
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
@@ -16,7 +16,7 @@ public class EnchantmentExplosiveBow extends Enchantment {
     private static final EnchantmentTarget target = EnchantmentTarget.BOW;
     private static final boolean treasure = true;
     private static final boolean curse = false;
-    private static final Enchantment[] conflicts = {};
+    private static final Enchantment[] conflicts = { Enchantment.ARROW_INFINITE };
 
     static{ instance = new EnchantmentExplosiveBow(); }
     private EnchantmentExplosiveBow(){ super(NamespacedKey.minecraft(name)); }

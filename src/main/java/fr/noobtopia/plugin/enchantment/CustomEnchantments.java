@@ -1,6 +1,6 @@
 package fr.noobtopia.plugin.enchantment;
 
-import fr.noobtopia.plugin.enchantment.enchantments.EnchantmentExplosiveBow;
+import fr.noobtopia.plugin.enchantment.enchantments.explosive.EnchantmentExplosiveBow;
 import org.bukkit.enchantments.Enchantment;
 
 import java.lang.reflect.Field;

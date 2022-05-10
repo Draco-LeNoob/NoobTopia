@@ -1,7 +1,7 @@
-package fr.noobtopia.plugin.enchantment.listeners;
+package fr.noobtopia.plugin.enchantment.enchantments.explosive.listeners;
 
 import fr.noobtopia.plugin.NoobPlugin;
-import fr.noobtopia.plugin.enchantment.enchantments.EnchantmentExplosiveBow;
+import fr.noobtopia.plugin.enchantment.enchantments.explosive.EnchantmentExplosiveBow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;

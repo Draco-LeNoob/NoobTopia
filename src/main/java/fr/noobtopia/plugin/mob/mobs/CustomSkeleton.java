@@ -39,13 +39,6 @@ public class CustomSkeleton extends CustomEntity {
             basic(NETHERITE_BOOTS),
             basic(NETHERITE_SWORD),
             new ItemBuilder(BOW).enchant(Enchantment.ARROW_DAMAGE, 3).enchant(Enchantment.ARROW_FIRE, 1).build(),
-    }; private static final ItemStack[] NETHERITE_SET_2 = {
-            basic(NETHERITE_HELMET),
-            basic(NETHERITE_CHESTPLATE),
-            basic(NETHERITE_LEGGINGS),
-            basic(NETHERITE_BOOTS),
-            new ItemBuilder(NETHERITE_SWORD).enchant(Enchantment.DAMAGE_ALL, 5).build(),
-            new ItemBuilder(BOW).enchant(Enchantment.ARROW_DAMAGE, 3).enchant(Enchantment.ARROW_FIRE, 1).build(),
     };
 
     public CustomSkeleton(LivingEntity entity, boolean boss) {
