@@ -3,17 +3,29 @@ version: "1.0"
 name: "NoobTopia"
 author: "DracoLeNoob"
 api-version: "1.18"
+
 commands:
   home:
     description: "Utilise à un home."
+    permission: "noobtopia.traveler"
   sethome:
     description: "Place un home."
+    permission: "noobtopia.traveler"
   delhome:
     description: "Supprime un home."
+    permission: "noobtopia.traveler"
   homes:
     description: "Affiche tous les homes."
+    permission: "noobtopia.traveler"
+
+  spawn:
+    description: "Teleport to the world spawn"
+  gex:
+    permission: "feuj"
 
   balance:
     description: "Affiche votre argent."
+    permission: "noobtopia.economy"
   pay:
     description: "Paye un autre joueur."
+    permission: "noobtopia.economy"

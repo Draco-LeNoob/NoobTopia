@@ -1,6 +1,6 @@
 package fr.noobtopia.plugin.economy;
 
-import fr.noobtopia.plugin.utils.Folders;
+import fr.noobtopia.plugin.io.Folders;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 

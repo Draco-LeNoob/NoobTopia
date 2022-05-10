@@ -1,14 +1,11 @@
 package fr.noobtopia.plugin.home.command;
 
 import fr.noobtopia.plugin.home.Home;
-import fr.noobtopia.plugin.utils.Folders;
 import fr.noobtopia.plugin.utils.Messages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.io.File;
 
 public class CommandHomes implements CommandExecutor {
     @Override

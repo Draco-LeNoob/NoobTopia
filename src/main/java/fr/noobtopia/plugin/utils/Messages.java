@@ -1,5 +1,6 @@
 package fr.noobtopia.plugin.utils;
 
+import fr.noobtopia.plugin.io.Files;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
