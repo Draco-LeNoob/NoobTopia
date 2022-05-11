@@ -1,7 +1,7 @@
 package fr.noobtopia.plugin.look;
 
-import fr.noobtopia.plugin.rank.Rank;
-import fr.noobtopia.plugin.utils.Messages;
+import fr.noobtopia.plugin.features.rank.Rank;
+import fr.noobtopia.plugin.engine.initer.Messages;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,6 +18,9 @@ public class LookJoinListener implements Listener {
         event.setJoinMessage(message);
 
         List<Rank> ranks = Rank.getRanksOf(player);
+
+        if(ranks == null || ranks.size() == 0) Rank.addRank(player, Rank.PLAYER);
+        ranks = Rank.getRanksOf(player);
         ranks.sort((rank1, rank2) -> rank2.getDisplay() - rank1.getDisplay());
         Rank rank = ranks.get(0);
 

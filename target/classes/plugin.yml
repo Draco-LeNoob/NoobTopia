@@ -29,3 +29,7 @@ commands:
   pay:
     description: "Paye un autre joueur."
     permission: "noobtopia.economy"
+
+  mana:
+    description: "Affiche votre mana"
+    permission: "noobtopia.mana"

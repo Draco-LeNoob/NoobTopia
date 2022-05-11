@@ -5,6 +5,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ItemBuilder {
@@ -26,10 +27,14 @@ public class ItemBuilder {
         return this;
     }
 
-    public ItemBuilder lore(String... lore){
+    public ItemBuilder lore(String line){
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(List.of(lore));
+        List<String> lore = meta.getLore();
 
+        if(lore == null) lore = new ArrayList<>();
+        lore.add(line);
+
+        meta.setLore(lore);
         item.setItemMeta(meta);
         return this;
     }

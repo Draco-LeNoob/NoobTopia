@@ -1,13 +1,11 @@
 package fr.noobtopia.plugin;
 
-import fr.noobtopia.plugin.economy.Economy;
-import fr.noobtopia.plugin.enchantment.CustomEnchantments;
-import fr.noobtopia.plugin.initer.Commands;
-import fr.noobtopia.plugin.initer.Listeners;
-import fr.noobtopia.plugin.initer.TabCompleters;
-import fr.noobtopia.plugin.io.Files;
-import fr.noobtopia.plugin.io.Folders;
-import fr.noobtopia.plugin.utils.*;
+import fr.noobtopia.plugin.features.economy.Economy;
+import fr.noobtopia.plugin.engine.enchantment.CustomEnchantments;
+import fr.noobtopia.plugin.engine.initer.*;
+import fr.noobtopia.plugin.initer.*;
+import fr.noobtopia.plugin.engine.io.Files;
+import fr.noobtopia.plugin.engine.io.Folder;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class NoobPlugin extends JavaPlugin {
@@ -18,7 +16,7 @@ public class NoobPlugin extends JavaPlugin {
         instance = this;
 
         // Create necessary files and folders for the plugin
-        Folders.create();
+        Folder.create();
         Files.create();
 
         // Initialize several systems

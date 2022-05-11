@@ -1,6 +1,6 @@
 package fr.noobtopia.plugin.look;
 
-import fr.noobtopia.plugin.utils.Messages;
+import fr.noobtopia.plugin.engine.initer.Messages;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
