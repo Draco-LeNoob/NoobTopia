@@ -4,7 +4,7 @@ import fr.noobtopia.plugin.NoobPlugin;
 import fr.noobtopia.plugin.features.economy.InitBalances;
 import fr.noobtopia.plugin.engine.enchantment.enchantments.explosive.listeners.ArrowHitListener;
 import fr.noobtopia.plugin.engine.enchantment.enchantments.explosive.listeners.ArrowShotListener;
-import fr.noobtopia.plugin.look.LookRespawnListener;
+import fr.noobtopia.plugin.engine.listeners.RespawnListener;
 import fr.noobtopia.plugin.look.LookJoinListener;
 import fr.noobtopia.plugin.look.LookLeaveListener;
 import fr.noobtopia.plugin.features.mob.mana.listeners.BossKilledEvent;
@@ -31,7 +31,7 @@ public class Listeners {
         register(new ArrowShotListener());
         register(new ArrowHitListener());
 
-        register(new LookRespawnListener());
+        register(new RespawnListener());
 
         register(new ManaUiClickListener());
         register(new BossKilledEvent());

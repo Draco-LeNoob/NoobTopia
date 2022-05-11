@@ -112,9 +112,6 @@ public class CustomEntity {
         if(!entity.isCustomNameVisible() || entity.getCustomName() == null) return -1;
         String[] split = entity.getCustomName().split(" ");
         String level = split[split.length - 1].substring(2);
-
-        System.out.println(level);
-
         return Integer.parseInt(level);
     }
     public static int getLevelFrom(Entity entity){ return getLevelFrom(entity.getLocation()); }

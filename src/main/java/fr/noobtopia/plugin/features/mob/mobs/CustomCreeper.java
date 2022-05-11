@@ -29,7 +29,7 @@ public class CustomCreeper extends CustomEntity {
 
             event.setCancelled(true);
             creeper.getWorld().createExplosion(creeper.getLocation(), CustomEntity.getLevelOf(creeper) / 2);
-            creeper.eject();
+            try{ creeper.eject(); } catch(Exception e){}
         }
     }
 }

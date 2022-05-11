@@ -3,7 +3,6 @@ package fr.noobtopia.plugin;
 import fr.noobtopia.plugin.features.economy.Economy;
 import fr.noobtopia.plugin.engine.enchantment.CustomEnchantments;
 import fr.noobtopia.plugin.engine.initer.*;
-import fr.noobtopia.plugin.initer.*;
 import fr.noobtopia.plugin.engine.io.Files;
 import fr.noobtopia.plugin.engine.io.Folder;
 import org.bukkit.plugin.java.JavaPlugin;
