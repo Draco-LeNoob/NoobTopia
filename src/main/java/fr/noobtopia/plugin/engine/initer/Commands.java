@@ -9,7 +9,8 @@ import fr.noobtopia.plugin.features.home.command.CommandHomes;
 import fr.noobtopia.plugin.features.home.command.CommandSethome;
 import fr.noobtopia.plugin.features.economy.command.CommandBalance;
 import fr.noobtopia.plugin.features.economy.command.CommandPay;
-import fr.noobtopia.plugin.features.mob.mana.commands.CommandMana;
+import fr.noobtopia.plugin.features.mana.commands.CommandMana;
+import fr.noobtopia.plugin.features.mob.commands.CommandSummonBoss;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -30,6 +31,7 @@ public class Commands {
         register("pay", new CommandPay());
 
         register("mana", new CommandMana());
+        register("sb", new CommandSummonBoss());
     }
 
     public static Command get(String name){ return Bukkit.getPluginCommand(name); }

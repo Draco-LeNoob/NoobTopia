@@ -1,6 +1,7 @@
 package fr.noobtopia.plugin.features.permission;
 
 import fr.noobtopia.plugin.features.rank.Rank;
+import fr.noobtopia.plugin.features.rank.RankManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,9 +12,9 @@ public class PermissionJoinListener implements Listener {
     public void onJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
 
-        if(!Rank.hasRank(player, Rank.PLAYER)) Rank.addRank(player, Rank.PLAYER);
+        if(!RankManager.hasRank(player, Rank.PLAYER)) RankManager.addRank(player, Rank.PLAYER);
 
         // TODO check if not freeze, if has been registered and logged on
-        Rank.applyPermissions(player);
+        RankManager.applyPermissions(player);
     }
 }

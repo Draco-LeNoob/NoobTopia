@@ -10,7 +10,7 @@ public class LookLeaveListener implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event){
         Player player = event.getPlayer();
-        String message = Messages.get("look.quit").replaceAll("<<player>>", player.getName());
+        String message = Messages.get("look.quit").replaceAll("<<player>>", player.getPlayerListName());
 
         event.setQuitMessage(message);
     }

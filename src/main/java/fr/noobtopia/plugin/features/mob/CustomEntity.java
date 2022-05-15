@@ -1,14 +1,17 @@
 package fr.noobtopia.plugin.features.mob;
 
+import fr.noobtopia.plugin.NoobPlugin;
 import fr.noobtopia.plugin.engine.initer.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.scheduler.BukkitRunnable;
 
-import java.util.HashMap;
+import java.util.*;
 
 import static fr.noobtopia.plugin.NoobPlugin.random;
 
@@ -22,11 +25,11 @@ public class CustomEntity {
         this.entity = entity;
 
         if(boss)
-            this.level = (int) Math.round(getLevelFrom(entity) * 1.1) + 3;
+            level = (int) Math.round(getLevelFrom(entity) * 1.1) + 3;
         else
-            this.level = getLevelFrom(entity);
+            level = getLevelFrom(entity);
 
-        if(this.level == 0) entity.remove();
+        if(level == 0) entity.remove();
 
         if(boss) {
             entity.getWorld().strikeLightningEffect(entity.getLocation());
@@ -46,7 +49,9 @@ public class CustomEntity {
     }
 
     protected void setStuff(boolean itemInHand){
-        if(level < 3) return;
+        if(this.entity != null && this.entity.getEquipment() != null) this.entity.getEquipment().clear();
+
+        if(level < 4) return;
 
         int offset = level;
         int setLevel = 0;
@@ -61,8 +66,6 @@ public class CustomEntity {
 
     private void randomStuff(int limit, boolean itemInHand, ItemStack... items){
         EntityEquipment inventory = entity.getEquipment();
-        inventory.clear();
-
         if(items == null) return;
 
         ItemStack helmet = null;
@@ -83,6 +86,7 @@ public class CustomEntity {
             else if(string.endsWith("_boots")) boots = item;
             else if(string.endsWith("_sword")) mainHand = item;
             else if(string.endsWith("bow")) mainHand = item;
+            else if(string.endsWith("trident")) mainHand = item;
         }
 
         while(itemInHand && mainHand == null){
@@ -93,7 +97,10 @@ public class CustomEntity {
 
             if(string.endsWith("_sword")) mainHand = item;
             else if(string.endsWith("bow")) mainHand = item;
+            else if(string.endsWith("trident")) mainHand = item;
         }
+
+        assert(inventory != null);
 
         if(helmet != null) inventory.setHelmet(helmet);
         if(chest != null) inventory.setChestplate(chest);
@@ -108,8 +115,21 @@ public class CustomEntity {
         inventory.setItemInMainHandDropChance(1);
     }
 
+    public static boolean isEquipment(ItemStack item){
+        String string = item.getType().toString().toLowerCase();
+
+        return string.endsWith("helmet")
+        || string.endsWith("chestplate")
+        || string.endsWith("leggings")
+        || string.endsWith("boots")
+        || string.endsWith("sword")
+        || string.endsWith("bow")
+        || string.endsWith("trident")
+        || string.endsWith("crossbow");
+    }
+
     public static int getLevelOf(Entity entity){
-        if(!entity.isCustomNameVisible() || entity.getCustomName() == null) return -1;
+        if(!CustomEntity.isCustom(entity)) return -1;
         String[] split = entity.getCustomName().split(" ");
         String level = split[split.length - 1].substring(2);
         return Integer.parseInt(level);
@@ -119,7 +139,7 @@ public class CustomEntity {
         int x = Math.abs(location.getChunk().getX());
         int y = Math.abs(location.getChunk().getZ());
 
-        int level = (int) Math.round(Math.sqrt(x + y));
+        int level = (int) Math.round(Math.sqrt(x + y)) + (location.getWorld().getEnvironment() == World.Environment.NORMAL ? 0 : 10);
 
         return level;
     }

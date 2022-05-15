@@ -33,3 +33,7 @@ commands:
   mana:
     description: "Affiche votre mana"
     permission: "noobtopia.mana"
+
+  sb:
+    description: "Summon a boss"
+    permission: ""
